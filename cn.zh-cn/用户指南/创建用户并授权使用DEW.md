@@ -1,6 +1,6 @@
 # 创建用户并授权使用DEW<a name="dew_01_0135"></a>
 
-如果您需要对您所拥有的DEW进行精细的权限管理，您可以使用[统一身份认证服务](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0079496985.html)（Identity and Access Management，简称IAM），通过IAM，您可以：
+如果您需要对您所拥有的DEW进行精细的权限管理，您可以使用[统一身份认证服务](https://support.huaweicloud.com/usermanual-iam/iam_01_0001.html)（Identity and Access Management，简称IAM），通过IAM，您可以：
 
 -   根据企业的业务组织，在您的华为云账号中，给企业中不同职能部门的员工创建IAM用户，让员工拥有唯一安全凭证，并使用DEW资源。
 -   根据企业用户的职能，设置不同的访问权限，以达到用户之间的权限隔离。
@@ -73,11 +73,11 @@
 **图 1**  给用户授权DEW权限流程<a name="fig23111471897"></a>  
 ![](figures/给用户授权DEW权限流程.png "给用户授权DEW权限流程")
 
-1.  <a name="li960014441019"></a>[创建用户组并授权](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0046611269.html)
+1.  <a name="li960014441019"></a>[创建用户组并授权](https://support.huaweicloud.com/usermanual-iam/iam_03_0001.html)
 
     在IAM控制台创建用户组，并授予数据加密服务加密密钥所有权限“KMS CMKFullAccess“。
 
-2.  [创建用户并加入用户组](https://support.huaweicloud.com/usermanual-iam/zh-cn_topic_0046611303.html)
+2.  [创建用户并加入用户组](https://support.huaweicloud.com/usermanual-iam/iam_02_0001.html)
 
     在IAM控制台创建用户，并将其加入[1](#li960014441019)中创建的用户组。
 
