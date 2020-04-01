@@ -12,61 +12,59 @@
 
 ## 前提条件<a name="section121325115513"></a>
 
--   “KMS CMKFullAccess“属于策略，请先在IAM控制台中开通基于策略的访问控制公测，开通方法请参见：[申请基于策略的访问控制公测](https://support.huaweicloud.com/usermanual-iam/iam_01_019.html)。
--   给用户组授权之前，请您了解用户组可以添加的DEW权限，并结合实际需求进行选择，DEW系统策略如[表1](#table1421117178)所示。若您需要对除DEW之外的其它服务授权，IAM支持服务的所有策略请参见[系统权限](https://support.huaweicloud.com/permissions/policy_list.html?product=dew)。
+给用户组授权之前，请您了解用户组可以添加的DEW权限，并结合实际需求进行选择，DEW系统策略如[表1](#table194381648115212)所示。若您需要对除DEW之外的其它服务授权，IAM支持服务的所有策略请参见[系统权限](https://support.huaweicloud.com/permissions/policy_list.html?product=dew)。
 
-    **表 1**  DEW系统权限
+**表 1**  DEW系统权限
 
-    <a name="table1421117178"></a>
-    <table><thead align="left"><tr id="zh-cn_topic_0169425412_row1346222921318"><th class="cellrowborder" valign="top" width="27.69276927692769%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0169425412_p246217292138"><a name="zh-cn_topic_0169425412_p246217292138"></a><a name="zh-cn_topic_0169425412_p246217292138"></a>系统角色/策略名称</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="35.32353235323533%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0169425412_p146292918139"><a name="zh-cn_topic_0169425412_p146292918139"></a><a name="zh-cn_topic_0169425412_p146292918139"></a>描述</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="16.711671167116712%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0169425412_p3459112418415"><a name="zh-cn_topic_0169425412_p3459112418415"></a><a name="zh-cn_topic_0169425412_p3459112418415"></a>类别</p>
-    </th>
-    <th class="cellrowborder" valign="top" width="20.27202720272027%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0169425412_p446218291138"><a name="zh-cn_topic_0169425412_p446218291138"></a><a name="zh-cn_topic_0169425412_p446218291138"></a>依赖关系</p>
-    </th>
-    </tr>
-    </thead>
-    <tbody><tr id="zh-cn_topic_0169425412_row1462142915137"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p25241140125910"><a name="zh-cn_topic_0169425412_p25241140125910"></a><a name="zh-cn_topic_0169425412_p25241140125910"></a>KMS Administrator</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p0462172991319"><a name="zh-cn_topic_0169425412_p0462172991319"></a><a name="zh-cn_topic_0169425412_p0462172991319"></a>数据加密服务加密密钥的管理员权限。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p134591224104113"><a name="zh-cn_topic_0169425412_p134591224104113"></a><a name="zh-cn_topic_0169425412_p134591224104113"></a>系统角色</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p446222915139"><a name="zh-cn_topic_0169425412_p446222915139"></a><a name="zh-cn_topic_0169425412_p446222915139"></a>无。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0169425412_row4708123532810"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p07090356289"><a name="zh-cn_topic_0169425412_p07090356289"></a><a name="zh-cn_topic_0169425412_p07090356289"></a>KMS CMKFullAccess</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p12709103592818"><a name="zh-cn_topic_0169425412_p12709103592818"></a><a name="zh-cn_topic_0169425412_p12709103592818"></a>数据加密服务加密密钥所有权限。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p1170963517284"><a name="zh-cn_topic_0169425412_p1170963517284"></a><a name="zh-cn_topic_0169425412_p1170963517284"></a>系统策略</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p1470993562816"><a name="zh-cn_topic_0169425412_p1470993562816"></a><a name="zh-cn_topic_0169425412_p1470993562816"></a>无。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0169425412_row13720637112819"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p13864438161415"><a name="zh-cn_topic_0169425412_p13864438161415"></a><a name="zh-cn_topic_0169425412_p13864438161415"></a>DEW KeypairFullAccess</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p1872023712815"><a name="zh-cn_topic_0169425412_p1872023712815"></a><a name="zh-cn_topic_0169425412_p1872023712815"></a>数据加密服务密钥对所有权限。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p772133712819"><a name="zh-cn_topic_0169425412_p772133712819"></a><a name="zh-cn_topic_0169425412_p772133712819"></a>系统策略</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p2072153711280"><a name="zh-cn_topic_0169425412_p2072153711280"></a><a name="zh-cn_topic_0169425412_p2072153711280"></a>无。</p>
-    </td>
-    </tr>
-    <tr id="zh-cn_topic_0169425412_row43641644115114"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p4365104445120"><a name="zh-cn_topic_0169425412_p4365104445120"></a><a name="zh-cn_topic_0169425412_p4365104445120"></a>DEW KeypairReadOnlyAccess</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p19365194475114"><a name="zh-cn_topic_0169425412_p19365194475114"></a><a name="zh-cn_topic_0169425412_p19365194475114"></a>数据加密服务密钥对查看权限。</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p6776131716526"><a name="zh-cn_topic_0169425412_p6776131716526"></a><a name="zh-cn_topic_0169425412_p6776131716526"></a>系统策略</p>
-    </td>
-    <td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p877621719521"><a name="zh-cn_topic_0169425412_p877621719521"></a><a name="zh-cn_topic_0169425412_p877621719521"></a>无。</p>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-
+<a name="table194381648115212"></a>
+<table><thead align="left"><tr id="zh-cn_topic_0169425412_row1346222921318"><th class="cellrowborder" valign="top" width="27.69276927692769%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0169425412_p246217292138"><a name="zh-cn_topic_0169425412_p246217292138"></a><a name="zh-cn_topic_0169425412_p246217292138"></a>系统角色/策略名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.32353235323533%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0169425412_p146292918139"><a name="zh-cn_topic_0169425412_p146292918139"></a><a name="zh-cn_topic_0169425412_p146292918139"></a>描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="16.711671167116712%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0169425412_p3459112418415"><a name="zh-cn_topic_0169425412_p3459112418415"></a><a name="zh-cn_topic_0169425412_p3459112418415"></a>类别</p>
+</th>
+<th class="cellrowborder" valign="top" width="20.27202720272027%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0169425412_p446218291138"><a name="zh-cn_topic_0169425412_p446218291138"></a><a name="zh-cn_topic_0169425412_p446218291138"></a>依赖关系</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0169425412_row1462142915137"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p25241140125910"><a name="zh-cn_topic_0169425412_p25241140125910"></a><a name="zh-cn_topic_0169425412_p25241140125910"></a>KMS Administrator</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p0462172991319"><a name="zh-cn_topic_0169425412_p0462172991319"></a><a name="zh-cn_topic_0169425412_p0462172991319"></a>数据加密服务加密密钥的管理员权限。</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p134591224104113"><a name="zh-cn_topic_0169425412_p134591224104113"></a><a name="zh-cn_topic_0169425412_p134591224104113"></a>系统角色</p>
+</td>
+<td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p446222915139"><a name="zh-cn_topic_0169425412_p446222915139"></a><a name="zh-cn_topic_0169425412_p446222915139"></a>无。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0169425412_row4708123532810"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p07090356289"><a name="zh-cn_topic_0169425412_p07090356289"></a><a name="zh-cn_topic_0169425412_p07090356289"></a>KMS CMKFullAccess</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p12709103592818"><a name="zh-cn_topic_0169425412_p12709103592818"></a><a name="zh-cn_topic_0169425412_p12709103592818"></a>数据加密服务加密密钥所有权限。</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p1170963517284"><a name="zh-cn_topic_0169425412_p1170963517284"></a><a name="zh-cn_topic_0169425412_p1170963517284"></a>系统策略</p>
+</td>
+<td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p1470993562816"><a name="zh-cn_topic_0169425412_p1470993562816"></a><a name="zh-cn_topic_0169425412_p1470993562816"></a>无。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0169425412_row13720637112819"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p13864438161415"><a name="zh-cn_topic_0169425412_p13864438161415"></a><a name="zh-cn_topic_0169425412_p13864438161415"></a>DEW KeypairFullAccess</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p1872023712815"><a name="zh-cn_topic_0169425412_p1872023712815"></a><a name="zh-cn_topic_0169425412_p1872023712815"></a>数据加密服务密钥对所有权限。</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p772133712819"><a name="zh-cn_topic_0169425412_p772133712819"></a><a name="zh-cn_topic_0169425412_p772133712819"></a>系统策略</p>
+</td>
+<td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p2072153711280"><a name="zh-cn_topic_0169425412_p2072153711280"></a><a name="zh-cn_topic_0169425412_p2072153711280"></a>无。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0169425412_row43641644115114"><td class="cellrowborder" valign="top" width="27.69276927692769%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0169425412_p4365104445120"><a name="zh-cn_topic_0169425412_p4365104445120"></a><a name="zh-cn_topic_0169425412_p4365104445120"></a>DEW KeypairReadOnlyAccess</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.32353235323533%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0169425412_p19365194475114"><a name="zh-cn_topic_0169425412_p19365194475114"></a><a name="zh-cn_topic_0169425412_p19365194475114"></a>数据加密服务密钥对查看权限。</p>
+</td>
+<td class="cellrowborder" valign="top" width="16.711671167116712%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0169425412_p6776131716526"><a name="zh-cn_topic_0169425412_p6776131716526"></a><a name="zh-cn_topic_0169425412_p6776131716526"></a>系统策略</p>
+</td>
+<td class="cellrowborder" valign="top" width="20.27202720272027%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0169425412_p877621719521"><a name="zh-cn_topic_0169425412_p877621719521"></a><a name="zh-cn_topic_0169425412_p877621719521"></a>无。</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ## 示例流程<a name="section882111167912"></a>
 
