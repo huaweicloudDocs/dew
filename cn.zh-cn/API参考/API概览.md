@@ -73,7 +73,7 @@
 </tr>
 <tr id="row9823134982516"><td class="cellrowborder" valign="top" width="29.631780694621906%" headers="mcps1.1.3.1.1 "><p id="p536471910307"><a name="p536471910307"></a><a name="p536471910307"></a><a href="创建随机数.md">创建随机数</a></p>
 </td>
-<td class="cellrowborder" valign="top" width="70.36821930537809%" headers="mcps1.1.3.1.2 "><p id="p1682374992518"><a name="p1682374992518"></a><a name="p1682374992518"></a>生成512bit的随机数。</p>
+<td class="cellrowborder" valign="top" width="70.36821930537809%" headers="mcps1.1.3.1.2 "><p id="p1682374992518"><a name="p1682374992518"></a><a name="p1682374992518"></a>生成8~8192bit范围内的随机数，且须为8的倍数。</p>
 </td>
 </tr>
 <tr id="row119151718237"><td class="cellrowborder" valign="top" width="29.631780694621906%" headers="mcps1.1.3.1.1 "><p id="p49167710234"><a name="p49167710234"></a><a name="p49167710234"></a><a href="创建数据密钥.md">创建数据密钥</a></p>

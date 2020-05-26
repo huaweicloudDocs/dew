@@ -1,5 +1,7 @@
 # SSH密钥对错误码<a name="dew_02_0303"></a>
 
+当您调用API时，如果遇到“APIGW”开头的错误码，请参见[API网关错误码](https://support.huaweicloud.com/devg-apisign/api-sign-errorcode.html)进行处理。
+
 <a name="table512310307323"></a>
 <table><thead align="left"><tr id="row1322463093211"><th class="cellrowborder" valign="top" width="8.000000000000002%" id="mcps1.1.5.1.1"><p id="p15224153018328"><a name="p15224153018328"></a><a name="p15224153018328"></a>状态码</p>
 </th>
