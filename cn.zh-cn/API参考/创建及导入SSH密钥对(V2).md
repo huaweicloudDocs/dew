@@ -1,4 +1,4 @@
-# 创建及导入SSH密钥对<a name="dew_02_0203"></a>
+# 创建及导入SSH密钥对\(V2\)<a name="dew_02_0203"></a>
 
 ## 功能介绍<a name="s02716ebaa1b94de5a935108e664aad10"></a>
 
@@ -42,8 +42,8 @@
 
 ## 请求消息<a name="s59fe797a7e2a4811a7b612618c246f91"></a>
 
->![](public_sys-resources/icon-note.gif) **说明：**   
->创建SSH密钥对时，只需要提交SSH密钥对的name属性。导入SSH密钥对时，才需要提交public\_key属性。  
+>![](public_sys-resources/icon-note.gif) **说明：** 
+>创建SSH密钥对时，只需要提交SSH密钥对的name属性。导入SSH密钥对时，才需要提交public\_key属性。
 
 **表 2**  请求参数
 
