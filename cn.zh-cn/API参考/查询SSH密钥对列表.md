@@ -16,21 +16,21 @@ GET /v3/\{project\_id\}/keypairs
 
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="10%" id="mcps1.2.5.1.2"><p>是否必选</p>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.3"><p>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="50%" id="mcps1.2.5.1.4"><p>描述</p>
+<th class="cellrowborder" valign="top" width="40%" id="mcps1.2.5.1.4"><p>描述</p>
 </th>
 </tr>
 </thead>
 <tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>project_id</p>
 </td>
-<td class="cellrowborder" valign="top" width="10%" headers="mcps1.2.5.1.2 "><p>是</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.5.1.4 "><p>项目ID。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>项目ID。</p>
 </td>
 </tr>
 </tbody>
@@ -43,21 +43,21 @@ GET /v3/\{project\_id\}/keypairs
 <a name="HeaderParameter"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
 </th>
-<th class="cellrowborder" valign="top" width="10%" id="mcps1.2.5.1.2"><p>是否必选</p>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.3"><p>参数类型</p>
 </th>
-<th class="cellrowborder" valign="top" width="50%" id="mcps1.2.5.1.4"><p>描述</p>
+<th class="cellrowborder" valign="top" width="40%" id="mcps1.2.5.1.4"><p>描述</p>
 </th>
 </tr>
 </thead>
 <tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>X-Auth-Token</p>
 </td>
-<td class="cellrowborder" valign="top" width="10%" headers="mcps1.2.5.1.2 "><p>是</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.5.1.4 "><p>用户Token。 通过调用IAM服务获取用户Token接口获取（响应消息头中X-Subject-Token的值）。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>用户Token。 通过调用IAM服务获取用户Token接口获取（响应消息头中X-Subject-Token的值）。</p>
 </td>
 </tr>
 </tbody>
@@ -65,7 +65,7 @@ GET /v3/\{project\_id\}/keypairs
 
 ## 响应参数
 
-**状态码为 200 时: **
+**状态码： 200**
 
 **表 3**  响应Body参数
 
@@ -80,7 +80,7 @@ GET /v3/\{project\_id\}/keypairs
 </thead>
 <tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>keypairs</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>Array of <a href="#response_ListKeypairs">ListKeypairs</a> objects</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>Array of <a href="#response_Keypairs">Keypairs</a> objects</p>
 </td>
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对信息列表。</p>
 </td>
@@ -88,9 +88,9 @@ GET /v3/\{project\_id\}/keypairs
 </tbody>
 </table>
 
-**表 4**  ListKeypairs
+**表 4**  Keypairs
 
-<a name="response_ListKeypairs"></a>
+<a name="response_Keypairs"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p>参数类型</p>
@@ -184,7 +184,7 @@ GET /v3/\{project\_id\}/keypairs
 </tbody>
 </table>
 
-**状态码为 400 时: **
+**状态码： 400**
 
 **表 6**  响应Body参数
 
@@ -220,7 +220,7 @@ GET /v3/\{project\_id\}/keypairs
 
 ## 响应示例
 
-**状态码为 200 时: **
+**状态码： 200**
 
 请求已成功。
 
@@ -240,7 +240,7 @@ GET /v3/\{project\_id\}/keypairs
 }
 ```
 
-**状态码为 400 时: **
+**状态码： 400**
 
 Error response。
 
@@ -253,7 +253,7 @@ Error response。
 
 ## 状态码
 
-<a name="table36063"></a>
+<a name="status_code"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="15%" id="mcps1.1.3.1.1"><p>状态码 </p>
 </th>
 <th class="cellrowborder" valign="top" width="85%" id="mcps1.1.3.1.2"><p>描述</p>
