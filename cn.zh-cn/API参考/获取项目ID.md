@@ -4,7 +4,7 @@
 
 项目ID可以通过调用[查询指定条件下的项目信息](https://support.huaweicloud.com/api-iam/iam_06_0001.html)API获取。
 
-获取项目ID的接口为“GET https://\{Endpoint\}/v3/projects”，其中\{Endpoint\}为IAM的终端节点，可以从[地区和终端节点](https://developer.huaweicloud.com/dev/endpoint)获取。接口的认证鉴权请参见[认证鉴权](认证鉴权.md)。
+获取项目ID的接口为“GET https://\{Endpoint\}/v3/projects”，其中\{Endpoint\}为IAM的终端节点，可以从[地区和终端节点](https://developer.huaweicloud.com/endpoint)获取。接口的认证鉴权请参见[认证鉴权](认证鉴权.md)。
 
 响应示例如下，其中projects下的“id”即为项目ID。
 
@@ -43,7 +43,6 @@
 3.  在基本信息页面单击“管理我的凭证”。
 
     在“API凭证”页面的项目列表中查看项目ID。
-
 
 **图 1**  查看项目ID<a name="zh-cn_topic_0101662393_fig48412424201120"></a>  
 ![](figures/查看项目ID.png "查看项目ID")
