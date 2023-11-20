@@ -1,16 +1,16 @@
-# 解绑SSH密钥对<a name="DisassociateKeypair"></a>
+# 批量绑定SSH密钥对<a name="BatchAssociateKeypair"></a>
 
 ## 功能介绍
 
-给指定的虚拟机解除绑定SSH密钥对并恢复SSH密码登录。
+给指定的虚拟机批量绑定新的SSH密钥对。
 
 ## 调试<a name="atuogenerate_1"></a>
 
-您可以在[API Explorer](https://console.huaweicloud.com/apiexplorer/#/openapi/KPS/doc?api=DisassociateKeypair)中调试该接口，支持自动认证鉴权。API Explorer可以自动生成SDK代码示例，并提供SDK代码示例调试功能。
+您可以在[API Explorer](https://console.huaweicloud.com/apiexplorer/#/openapi/KPS/doc?api=BatchAssociateKeypair)中调试该接口，支持自动认证鉴权。API Explorer可以自动生成SDK代码示例，并提供SDK代码示例调试功能。
 
 ## URI<a name="atuogenerate_2"></a>
 
-POST /v3/\{project\_id\}/keypairs/disassociate
+POST /v3/\{project\_id\}/keypairs/batch-associate
 
 **表 1**  路径参数
 
@@ -65,7 +65,7 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 
 **表 3**  请求Body参数
 
-<a name="request_DisassociateKeypairRequestBody"></a>
+<a name="request_BatchAssociateKeypairRequestBody"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
@@ -76,11 +76,46 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 </th>
 </tr>
 </thead>
-<tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>server</p>
+<tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>batch_keypairs</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p><a href="#request_DisassociateEcsServerInfo">DisassociateEcsServerInfo</a> object</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>Array of <a href="#request_AssociateKeypairRequestBody">AssociateKeypairRequestBody</a> objects</p>
+</td>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>最多可同时选择10个弹性云服务器绑定密钥对。</p>
+<p>约束：只支持选择相同的密钥对，弹性云服务器处于“运行中”状态，并未绑定密钥对。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 4**  AssociateKeypairRequestBody
+
+<a name="request_AssociateKeypairRequestBody"></a>
+<table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
+</th>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.3"><p>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="40%" id="mcps1.2.5.1.4"><p>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>keypair_name</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对的名称</p>
+</td>
+</tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>server</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p><a href="#request_EcsServerInfo">EcsServerInfo</a> object</p>
 </td>
 <td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>需要绑定密钥对的虚拟机信息。</p>
 </td>
@@ -88,9 +123,9 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 </tbody>
 </table>
 
-**表 4**  DisassociateEcsServerInfo
+**表 5**  EcsServerInfo
 
-<a name="request_DisassociateEcsServerInfo"></a>
+<a name="request_EcsServerInfo"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
@@ -119,10 +154,30 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 <td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>可选字段，鉴权认证类型。替换时需要该参数，重置时不需要该参数。</p>
 </td>
 </tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>disable_password</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>Boolean</p>
+</td>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><ul><li><p>true：禁用虚拟机的ssh登录。</p>
+</li><li><p>false：不禁用虚拟机的ssh登录。</p>
+</li></ul>
+</td>
+</tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>port</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>Long</p>
+</td>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH监听端口。</p>
+</td>
+</tr>
 </tbody>
 </table>
 
-**表 5**  Auth
+**表 6**  Auth
 
 <a name="request_Auth"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
@@ -160,9 +215,30 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 
 ## 响应参数
 
-**状态码： 202**
+**状态码： 200**
 
-**表 6**  响应Body参数
+**表 7**  响应Body参数
+
+<a name="response_BatchTaskResponseBody"></a>
+<table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p>参数类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="60%" id="mcps1.2.4.1.3"><p>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>tasks</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>Array of <a href="#response_TaskResponseBody">TaskResponseBody</a> objects</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>批量绑定密钥对任务。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**表 8**  TaskResponseBody
 
 <a name="response_TaskResponseBody"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
@@ -213,7 +289,7 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 
 **状态码： 400**
 
-**表 7**  响应Body参数
+**表 9**  响应Body参数
 
 <a name="response_ErrorRsp"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
@@ -243,35 +319,50 @@ POST /v3/\{project\_id\}/keypairs/disassociate
 
 ## 请求示例
 
--   ```
-{
-  "server" : {
-    "id" : "d76baba7-ef09-40a2-87ff-3eafec0696e7",
-    "auth" : {
-      "type" : "keypair",
-      "key" : "-----BEGINRSAPRIVATEKEY-----\nM..."
-    }
-  }
-}
 ```
-
--   ```
 {
-  "server" : {
-    "id" : "x76baba7-ef09-40a2-87ff-3eafec0696e7"
-  }
+  "batch_keypairs" : [ {
+    "keypair_name" : "1",
+    "server" : {
+      "id" : "fxxx16e3-74b8-4025-9852-1f451932c20c",
+      "disable_password" : false,
+      "auth" : {
+        "type" : "password",
+        "key" : "password"
+      }
+    }
+  }, {
+    "keypair_name" : "1",
+    "server" : {
+      "id" : "4xxxxfc4-b4bf-49c2-b983-a1811c9760c1",
+      "disable_password" : false,
+      "auth" : {
+        "type" : "password",
+        "key" : "password"
+      }
+    }
+  } ]
 }
 ```
 
 ## 响应示例
 
-**状态码： 202**
+**状态码： 200**
 
-OK
+请求已成功。
 
 ```
 {
-  "task_id" : "aee8d2fe-5484-4753-9177-5a38dc15546c"
+  "tasks" : [ {
+    "server_id" : "xxx",
+    "task_id" : "xxx",
+    "status" : "SUCCESS"
+  }, {
+    "server_id" : "xxx",
+    "status" : "Failed",
+    "error_code" : "xxxx",
+    "error_msg" : "xxxx"
+  } ]
 }
 ```
 
@@ -295,9 +386,9 @@ Error response
 </th>
 </tr>
 </thead>
-<tbody><tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>202</p>
+<tbody><tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>200</p>
 </td>
-<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>OK</p>
+<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>请求已成功。</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>400</p>
