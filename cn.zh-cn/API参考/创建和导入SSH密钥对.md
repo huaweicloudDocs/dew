@@ -2,13 +2,13 @@
 
 ## 功能介绍
 
-创建和导入SSH密钥对。
+创建和导入SSH密钥对
 
-## 调试
+## 调试<a name="atuogenerate_1"></a>
 
-您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=KPS&api=CreateKeypair)中调试该接口。
+您可以在[API Explorer](https://console.huaweicloud.com/apiexplorer/#/openapi/KPS/doc?api=CreateKeypair)中调试该接口，支持自动认证鉴权。API Explorer可以自动生成SDK代码示例，并提供SDK代码示例调试功能。
 
-## URI
+## URI<a name="atuogenerate_2"></a>
 
 POST /v3/\{project\_id\}/keypairs
 
@@ -30,7 +30,7 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>项目ID。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>项目ID</p>
 </td>
 </tr>
 </tbody>
@@ -65,7 +65,7 @@ POST /v3/\{project\_id\}/keypairs
 
 **表 3**  请求Body参数
 
-<a name="requestParameter"></a>
+<a name="request_CreateKeypairRequestBody"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
@@ -82,7 +82,7 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p><a href="#request_CreateKeypairAction">CreateKeypairAction</a> object</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>创建密钥对请求体请求参数。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>创建密钥对请求体请求参数</p>
 </td>
 </tr>
 </tbody>
@@ -119,7 +119,7 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对的类型。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对的类型。ssh或x509。</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>public_key</p>
@@ -137,7 +137,7 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>租户级或者用户级。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>租户级或者用户级。domain或user。</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>user_id</p>
@@ -146,7 +146,7 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对所属的用户信息。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对所属的用户信息</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>key_protection</p>
@@ -185,7 +185,7 @@ POST /v3/\{project\_id\}/keypairs
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>encryption</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>否</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p><a href="#request_Encryption">Encryption</a> object</p>
 </td>
@@ -210,7 +210,7 @@ POST /v3/\{project\_id\}/keypairs
 </thead>
 <tbody><tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>type</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>否</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
@@ -222,7 +222,7 @@ POST /v3/\{project\_id\}/keypairs
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>kms_key_name</p>
 </td>
-<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>否</p>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>是</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
@@ -240,7 +240,7 @@ POST /v3/\{project\_id\}/keypairs
 
 **表 7**  响应Body参数
 
-<a name="responseParameter"></a>
+<a name="response_CreateKeypairResponseBody"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p>参数类型</p>
@@ -253,7 +253,7 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p><a href="#response_CreateKeypairResp">CreateKeypairResp</a> object</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对信息详情。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对信息详情</p>
 </td>
 </tr>
 </tbody>
@@ -274,21 +274,21 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对的名称。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对的名称</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>type</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对的类型。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对的类型。ssh或x509。</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>public_key</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对对应的publicKey信息。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对对应的publicKey信息</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>private_key</p>
@@ -305,14 +305,14 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对应指纹信息。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对应指纹信息</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>user_id</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对所属的用户信息。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>SSH密钥对所属的用户信息</p>
 </td>
 </tr>
 </tbody>
@@ -322,7 +322,7 @@ POST /v3/\{project\_id\}/keypairs
 
 **表 9**  响应Body参数
 
-<a name="responseParameter_1"></a>
+<a name="response_ErrorRsp"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p>参数类型</p>
@@ -335,14 +335,14 @@ POST /v3/\{project\_id\}/keypairs
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误码。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误码</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>error_msg</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误描述。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误描述</p>
 </td>
 </tr>
 </tbody>
@@ -362,7 +362,7 @@ POST /v3/\{project\_id\}/keypairs
 
 **状态码： 200**
 
-OK。
+请求已成功
 
 ```
 {
@@ -379,7 +379,7 @@ OK。
 
 **状态码： 400**
 
-Error response。
+Error response
 
 ```
 {
@@ -399,12 +399,12 @@ Error response。
 </thead>
 <tbody><tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>200</p>
 </td>
-<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>OK。</p>
+<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>请求已成功</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>400</p>
 </td>
-<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>Error response。</p>
+<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>Error response</p>
 </td>
 </tr>
 </tbody>
