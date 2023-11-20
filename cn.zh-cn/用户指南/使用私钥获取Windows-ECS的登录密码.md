@@ -19,11 +19,10 @@
 
     若是“.ppk“格式文件，请参考[如何将“.ppk”格式的私钥文件转化为“.pem”格式](https://support.huaweicloud.com/dew_faq/dew_01_0099.html)进行转换。
 
-
 ## 操作步骤<a name="section7349054173814"></a>
 
 1.  [登录管理控制台](https://console.huaweicloud.com)。
-2.  单击管理控制台左上角![](figures/icon_region.png)，选择区域或项目。
+2.  单击管理控制台左上角的![](figures/icon_region-14.png)，选择区域或项目。
 3.  单击![](figures/icon-servicelist.png)，选择“计算 \> 弹性云服务器“。
 4.  在弹性云服务器列表，选择待获取密码的弹性云服务器。
 5.  选择“操作 \> 更多“，单击“获取密码“。
