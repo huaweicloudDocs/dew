@@ -4,11 +4,11 @@
 
 给指定的虚拟机绑定（替换或重置，替换需提供虚拟机已配置的SSH密钥对私钥；重置不需要提供虚拟机的SSH密钥对私钥）新的SSH密钥对。
 
-## 调试
+## 调试<a name="atuogenerate_1"></a>
 
-您可以在[API Explorer](https://apiexplorer.developer.huaweicloud.com/apiexplorer/doc?product=KPS&api=AssociateKeypair)中调试该接口。
+您可以在[API Explorer](https://console.huaweicloud.com/apiexplorer/#/openapi/KPS/doc?api=AssociateKeypair)中调试该接口，支持自动认证鉴权。API Explorer可以自动生成SDK代码示例，并提供SDK代码示例调试功能。
 
-## URI
+## URI<a name="atuogenerate_2"></a>
 
 POST /v3/\{project\_id\}/keypairs/associate
 
@@ -65,7 +65,7 @@ POST /v3/\{project\_id\}/keypairs/associate
 
 **表 3**  请求Body参数
 
-<a name="requestParameter"></a>
+<a name="request_AssociateKeypairRequestBody"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.5.1.2"><p>是否必选</p>
@@ -82,7 +82,7 @@ POST /v3/\{project\_id\}/keypairs/associate
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对的名称。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH密钥对的名称</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>server</p>
@@ -116,7 +116,7 @@ POST /v3/\{project\_id\}/keypairs/associate
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>需要绑定(替换或重置)SSH密钥对的虚拟机id。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>需要绑定(替换或重置)SSH密钥对的虚拟机id</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>auth</p>
@@ -137,6 +137,15 @@ POST /v3/\{project\_id\}/keypairs/associate
 <td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><ul><li><p>true：禁用虚拟机的ssh登录。</p>
 </li><li><p>false：不禁用虚拟机的ssh登录。</p>
 </li></ul>
+</td>
+</tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>port</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.2 "><p>否</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>Long</p>
+</td>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>SSH监听端口。</p>
 </td>
 </tr>
 </tbody>
@@ -161,7 +170,7 @@ POST /v3/\{project\_id\}/keypairs/associate
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.3 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>取值为枚举类型。</p>
+<td class="cellrowborder" valign="top" width="40%" headers="mcps1.2.5.1.4 "><p>取值为枚举类型。password或keypair。</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.5.1.1 "><p>key</p>
@@ -184,7 +193,7 @@ POST /v3/\{project\_id\}/keypairs/associate
 
 **表 6**  响应Body参数
 
-<a name="responseParameter"></a>
+<a name="response_TaskResponseBody"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p>参数类型</p>
@@ -200,6 +209,34 @@ POST /v3/\{project\_id\}/keypairs/associate
 <td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>任务下发成功返回的ID。</p>
 </td>
 </tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>server_id</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>绑定的虚拟机id。</p>
+</td>
+</tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>status</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>任务下发的状态。SUCCESS或FAILED。</p>
+</td>
+</tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>error_code</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>任务下发失败返回的错误码。</p>
+</td>
+</tr>
+<tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>error_msg</p>
+</td>
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
+</td>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>任务下发失败返回的错误信息。</p>
+</td>
+</tr>
 </tbody>
 </table>
 
@@ -207,7 +244,7 @@ POST /v3/\{project\_id\}/keypairs/associate
 
 **表 7**  响应Body参数
 
-<a name="responseParameter_1"></a>
+<a name="response_ErrorRsp"></a>
 <table><thead align="left"><tr><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p>参数</p>
 </th>
 <th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.2"><p>参数类型</p>
@@ -220,14 +257,14 @@ POST /v3/\{project\_id\}/keypairs/associate
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误码。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误码</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p>error_msg</p>
 </td>
 <td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.2 "><p>String</p>
 </td>
-<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误描述。</p>
+<td class="cellrowborder" valign="top" width="60%" headers="mcps1.2.4.1.3 "><p>错误描述</p>
 </td>
 </tr>
 </tbody>
@@ -237,12 +274,12 @@ POST /v3/\{project\_id\}/keypairs/associate
 
 -   ```
 {
-  "keypair_name" : "newkeypair",
+  "keypair_name" : "newkeypair1",
   "server" : {
     "id" : "d76baba7-ef09-40a2-87ff-3eafec0696e7",
-    "authentication" : {
+    "auth" : {
       "type" : "keypair",
-      "key" : "-----BEGINRSAPRIVATEKEY-----\nM..."
+      "key" : "-----BEGINRSAPRIVATEKEY-----M..."
     }
   }
 }
@@ -250,19 +287,18 @@ POST /v3/\{project\_id\}/keypairs/associate
 
 -   ```
 {
-  "keypair_name" : "newkeypair",
+  "keypair_name" : "newkeypair2",
   "server" : {
     "id" : "d76baba7-ef09-40a2-87ff-3eafec0696e7"
   }
 }
 ```
 
-
 ## 响应示例
 
 **状态码： 200**
 
-OK。
+OK
 
 ```
 {
@@ -272,7 +308,7 @@ OK。
 
 **状态码： 400**
 
-Error response。
+Error response
 
 ```
 {
@@ -292,12 +328,12 @@ Error response。
 </thead>
 <tbody><tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>200</p>
 </td>
-<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>OK。</p>
+<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>OK</p>
 </td>
 </tr>
 <tr><td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.3.1.1 "><p>400</p>
 </td>
-<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>Error response。</p>
+<td class="cellrowborder" valign="top" width="85%" headers="mcps1.1.3.1.2 "><p>Error response</p>
 </td>
 </tr>
 </tbody>

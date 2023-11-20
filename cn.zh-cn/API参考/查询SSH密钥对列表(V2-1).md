@@ -37,7 +37,6 @@
     </tbody>
     </table>
 
-
 ## 请求消息<a name="section66616625145216"></a>
 
 无
@@ -176,7 +175,6 @@
         "error_msg": "XXXX"
     }
     ```
-
 
 ## 状态码<a name="s45a1d5602b9a4b5b942549cb65e046cc"></a>
 
